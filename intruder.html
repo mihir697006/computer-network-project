@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Intruder Threats in Cybersecurity</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #1b1f3b, #2c3e50);
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 15px 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      color: #ffffffcc;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #ffe600;
+    }
+
+    nav a.active,
+    nav a[href="intruder.html"] {
+      background-color: #ffe600;
+      color: #000;
+      font-weight: bold;
+    }
+
+    nav a.active:hover,
+    nav a[href="intruder.html"]:hover {
+      background-color: #ffcf00;
+      color: #111;
+      box-shadow: 0 0 10px #ffe60080;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #2e3a59;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ffe600;
+      text-align: center;
+      margin-bottom: 30px;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ffe60080, 0 0 20px #ffe60040;
+      }
+      to {
+        text-shadow: 0 0 20px #ffe600cc, 0 0 30px #ffe60099;
+      }
+    }
+
+    h2 {
+      color: #ffd700;
+      margin-top: 30px;
+    }
+
+    h3 {
+      color: #ffe600;
+      margin-top: 20px;
+    }
+
+    p, ul {
+      color: #ddd;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+
+    ul li::marker {
+      color: #ffe600;
+    }
+
+    strong {
+      color: #ffe600;
+    }
+
+    .section-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 2px solid #ffe600;
+      border-left-width: 6px;
+      padding: 25px;
+      border-radius: 12px;
+      margin-top: 25px;
+      box-shadow: 0 0 20px #ffe60040;
+    }
+
+    .highlight {
+      background-color: #ffe600;
+      color: #111;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button-container a {
+      padding: 14px 28px;
+      background: #ffe600;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px #ffe60066;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .button-container a:hover {
+      background-color: #ffcf00;
+      box-shadow: 0 0 20px #ffe600cc, 0 0 30px #ffe60080;
+    }
+
+    .button-container a::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.4s ease, height 0.4s ease;
+      z-index: 0;
+    }
+
+    .button-container a:active::after {
+      width: 200%;
+      height: 500%;
+    }
+
+    .button-container a span {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+
+      .button-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="malware.html">Malware</a>
+    <a href="viruses.html">Viruses</a>
+    <a href="insiders.html">Insiders</a>
+    <a href="criminal_organization.html">Criminal Org.</a>
+    <a href="intruder.html" class="active">Intruder</a>
+    <a href="terrorist_activity.html">Terrorist Activity</a>
+    <a href="videos.html">Videos</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <div class="container">
+    <h1>Intruder Threats in Cybersecurity</h1>
+
+    <div class="section-card">
+      <h2>What is an Intruder?</h2>
+      <p>
+        An intruder is an unauthorized individual who gains access to a system with malicious intent. These actors bypass authentication mechanisms to exploit data, disrupt operations, or cause damage.
+      </p>
+    </div>
+
+    <div class="section-card">
+      <h2>Categories of Intruders</h2>
+
+      <h3>1. Masquerader</h3>
+      <p>Masqueraders impersonate legitimate users using stolen credentials or social engineering.</p>
+      <ul>
+        <li>Example: A hacker logging in using a manager’s leaked password.</li>
+      </ul>
+
+      <h3>2. Misfeasor</h3>
+      <p>Insiders who misuse their access to perform unauthorized actions.</p>
+      <ul>
+        <li>Example: An employee accessing confidential files without permission.</li>
+      </ul>
+
+      <h3>3. Clandestine User</h3>
+      <p>Users with advanced privileges who manipulate system controls to stay hidden.</p>
+      <ul>
+        <li>Example: A system admin installing a secret backdoor for persistent access.</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2>Risks of Intruders</h2>
+
+      <h3>1. Data Corruption 📉</h3>
+      <p>Intruders may intentionally or unintentionally alter or destroy critical data.</p>
+
+      <h3>2. Theft of Data 🔓</h3>
+      <p>Confidential or proprietary information may be stolen and sold or leaked.</p>
+
+      <h3>3. Financial Loss 💸</h3>
+      <p>Organizations may suffer losses from theft or through costly recovery and ransoms.</p>
+
+      <h3>4. Loss of Reputation ⚠️</h3>
+      <p>Data breaches damage trust and brand reputation, affecting long-term viability.</p>
+
+      <h3>5. System Disruptions 🚫</h3>
+      <p>DDoS attacks and malware deployments can render systems inoperable.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>How to Prevent Intruder Attacks?</h2>
+
+      <h3>🔐 <span>Strong Access Controls</span></h3>
+      <p>Implement MFA and role-based access policies.</p>
+
+      <h3>🛡 <span>Intrusion Detection Systems (IDS)</span></h3>
+      <p>Use IDS to detect unusual patterns and potential breaches early.</p>
+
+      <h3>📊 <span>Regular Security Audits</span></h3>
+      <p>Assess systems regularly to patch vulnerabilities and improve defense.</p>
+
+      <h3>📩 <span>Employee Awareness</span></h3>
+      <p>Train staff to identify phishing and other intrusion tactics.</p>
+    </div>
+
+    <div class="button-container">
+      <a href="criminal_organization.html"><span>⬅ Back to Criminal Org.</span></a>
+      <a href="terrorist_activity.html"><span>Next: Terrorist Activity ➡</span></a>
+    </div>
+  </div>
+
+</body>
+</html>

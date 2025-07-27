@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Insider Threats in Cybersecurity</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #1b1f3b, #2c3e50);
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 15px 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      color: #ffffffcc;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #ffe600;
+    }
+
+    nav a.active,
+    nav a[href="insiders.html"] {
+      background-color: #ffe600;
+      color: #000;
+      font-weight: bold;
+    }
+
+    nav a.active:hover,
+    nav a[href="insiders.html"]:hover {
+      background-color: #ffcf00;
+      color: #111;
+      box-shadow: 0 0 10px #ffe60080;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #2e3a59;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .highlight-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid #ffe600;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #ffe60066;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .highlight-box h1 {
+      color: #ffe600;
+      font-size: 2.5em;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ffe60080, 0 0 20px #ffe60040;
+      }
+      to {
+        text-shadow: 0 0 20px #ffe600cc, 0 0 30px #ffe60099;
+      }
+    }
+
+    h2 {
+      color: #ffd700;
+      margin: 30px 0 15px;
+    }
+
+    h3 {
+      color: #ffe600;
+      margin-top: 20px;
+    }
+
+    p, ul {
+      font-size: 1rem;
+      color: #ddd;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+
+    strong {
+      color: #ffe600;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nav-buttons a {
+      padding: 14px 28px;
+      background: #ffe600;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px #ffe60066;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-buttons a:hover {
+      background-color: #ffcf00;
+      box-shadow: 0 0 20px #ffe600cc, 0 0 30px #ffe60080;
+    }
+
+    .nav-buttons a::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.4s ease, height 0.4s ease;
+      z-index: 0;
+    }
+
+    .nav-buttons a:active::after {
+      width: 200%;
+      height: 500%;
+    }
+
+    .nav-buttons a span {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+
+      .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="malware.html">Malware</a>
+    <a href="viruses.html">Viruses</a>
+    <a href="insiders.html" class="active">Insiders</a>
+    <a href="criminal_organization.html">Criminal Org.</a>
+    <a href="intruder.html">Intruder</a>
+    <a href="terrorist_activity.html">Terrorist Activity</a>
+    <a href="videos.html">Videos</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <div class="container">
+    <div class="highlight-box">
+      <h1>Insider Threats</h1>
+    </div>
+
+    <h2>What is an Insider Threat?</h2>
+    <p>
+      An <strong>insider threat</strong> involves someone from within the organization—like an employee, contractor, or business partner—who has authorized access but uses it to harm the organization, either intentionally or accidentally.
+    </p>
+
+    <h2>Types of Insider Threats</h2>
+
+    <h3>1. Malicious Insider</h3>
+    <ul>
+      <li>Deliberately steals confidential information.</li>
+      <li>Installs malware or sabotages systems.</li>
+      <li>Shares company secrets with competitors or cybercriminals.</li>
+    </ul>
+
+    <h3>2. Careless Insider</h3>
+    <ul>
+      <li>Falls for phishing attacks or uses weak passwords.</li>
+      <li>Leaves devices unlocked or unattended.</li>
+      <li>Accidentally leaks information via unsecured platforms.</li>
+    </ul>
+
+    <h3>3. Mole (Insider Impersonator)</h3>
+    <ul>
+      <li>Infiltrates the organization posing as an employee or contractor.</li>
+      <li>Acts on behalf of a competitor, nation-state, or cyber gang.</li>
+      <li>Plants surveillance or backdoors for future exploitation.</li>
+    </ul>
+
+    <h2>Preventing Insider Threats</h2>
+    <ul>
+      <li><strong>Access Controls:</strong> Limit user permissions based on roles.</li>
+      <li><strong>Employee Awareness:</strong> Regular security training and phishing simulations.</li>
+      <li><strong>Monitoring:</strong> Use of activity logging and behavioral analysis.</li>
+      <li><strong>MFA:</strong> Enforce multi-factor authentication for sensitive systems.</li>
+      <li><strong>Incident Response Plan:</strong> Have a defined protocol for detecting and responding to threats.</li>
+    </ul>
+
+    <div class="nav-buttons">
+      <a href="viruses.html"><span>⬅ Back to Viruses</span></a>
+      <a href="criminal_organization.html"><span>Next: CriminalOrganization ➡</span></a>
+    </div>
+  </div>
+
+</body>
+</html>

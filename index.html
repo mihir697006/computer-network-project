@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Computer Security Threats</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1b1f3b, #2c3e50);
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 15px 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      color: #ffffffcc;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #ffe600;
+    }
+
+    nav a.active {
+      background-color: #ffe600;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #2e3a59;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .highlight-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid #ffe600;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #ffe60066;
+      text-align: center;
+      margin-bottom: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .highlight-box:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 25px #ffe600aa;
+    }
+
+    h1 {
+      color: #ffe600;
+      font-size: 2.5em;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ffe60080, 0 0 20px #ffe60040;
+      }
+      to {
+        text-shadow: 0 0 20px #ffe600cc, 0 0 30px #ffe60099;
+      }
+    }
+
+    .definition {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+      margin-bottom: 30px;
+      text-align: center;
+      max-width: 800px;
+      margin-inline: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #ffd700;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #ffe60044;
+    }
+
+    .img-section {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .img-section img {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #3c4a6b;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px #ffe60055;
+    }
+
+    .card h3 {
+      color: #ffe600;
+      margin-bottom: 10px;
+      text-shadow: 0 0 8px #ffe60066;
+    }
+
+    .card p, .card ul {
+      color: #ddd;
+      font-size: 0.95rem;
+    }
+
+    .card ul {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+
+    /* Next Button with Effects */
+    .next-button {
+      position: relative;
+      display: inline-block;
+      margin: 40px auto 0;
+      background: #ffe600;
+      color: #000;
+      padding: 14px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .next-button:hover {
+      background-color: #ffcf00;
+      box-shadow: 0 0 15px #ffe600, 0 0 25px #ffe60080;
+    }
+
+    .next-button::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.4s ease, height 0.4s ease;
+      z-index: 0;
+    }
+
+    .next-button:active::after {
+      width: 200%;
+      height: 500%;
+    }
+
+    .next-button span {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+
+      .container {
+        padding: 20px;
+      }
+
+      .next-button {
+        padding: 12px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="malware.html">Malware</a>
+    <a href="viruses.html">Viruses</a>
+    <a href="insiders.html">Insiders</a>
+    <a href="Criminal_Organization.html">Criminal Org.</a>
+    <a href="intruder.html">Intruder</a>
+    <a href="terrorist_activity.html">Terrorist Activity</a>
+    <a href="videos.html">Videos</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <div class="container">
+    <div class="highlight-box">
+      <h1>Computer Security Threats</h1>
+    </div>
+
+    <p class="definition">
+      A computer security threat is any potential danger or malicious activity that can compromise the confidentiality, integrity, or availability of data, systems, or networks. These threats can originate from both physical and digital sources, such as cybercriminals, system vulnerabilities, or even natural disasters.
+    </p>
+
+    <h2>Types of Threats</h2>
+
+    <div class="img-section">
+      <img src="https://d2ds8yldqp7gxv.cloudfront.net/Blog+Explanatory+Images/Top+10+Cyber+Security+Threats+2.webp" alt="Computer Security Threats">
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Physical Threats</h3>
+        <p>
+          Physical threats involve environmental or human actions that can damage computer hardware or systems, resulting in data loss, outages, or device failure. Examples include fire, theft, flooding, and vandalism.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Non-Physical Threats</h3>
+        <p>
+          These threats do not cause physical harm but aim to compromise system functionality, steal sensitive information, or disrupt operations. Examples include hacking, phishing, and malicious software.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Common Non-Physical Threats</h3>
+        <ul>
+          <li>Malware</li>
+          <li>Viruses, Worms, and Trojans</li>
+          <li>Intruders and Hackers</li>
+          <li>Malicious Insiders</li>
+          <li>Criminal Organizations</li>
+          <li>Terrorist Activities</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <a href="malware.html" class="next-button"><span>Next Page ➡</span></a>
+    </div>
+  </div>
+
+</body>
+</html>

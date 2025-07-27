@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terrorist Activity</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #1b1f3b, #2c3e50);
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 15px 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      color: #ffffffcc;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #ffe600;
+    }
+
+    nav a.active,
+    nav a[href="terrorist_activity.html"] {
+      background-color: #ffe600;
+      color: #000;
+      font-weight: bold;
+    }
+
+    nav a.active:hover,
+    nav a[href="terrorist_activity.html"]:hover {
+      background-color: #ffcf00;
+      color: #111;
+      box-shadow: 0 0 10px #ffe60080;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #2e3a59;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ffe600;
+      text-align: center;
+      margin-bottom: 30px;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ffe60080, 0 0 20px #ffe60040;
+      }
+      to {
+        text-shadow: 0 0 20px #ffe600cc, 0 0 30px #ffe60099;
+      }
+    }
+
+    h2 {
+      color: #ffd700;
+      margin-top: 30px;
+    }
+
+    h3 {
+      color: #ffe600;
+      margin-top: 20px;
+    }
+
+    p, ul {
+      color: #ddd;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+
+    ul li::marker {
+      color: #ffe600;
+    }
+
+    strong {
+      color: #ffe600;
+    }
+
+    .section-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 2px solid #ffe600;
+      border-left-width: 6px;
+      padding: 25px;
+      border-radius: 12px;
+      margin-top: 25px;
+      box-shadow: 0 0 20px #ffe60040;
+    }
+
+    .highlight {
+      background-color: #ffe600;
+      color: #111;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button-container a {
+      padding: 14px 28px;
+      background: #ffe600;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px #ffe60066;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .button-container a:hover {
+      background-color: #ffcf00;
+      box-shadow: 0 0 20px #ffe600cc, 0 0 30px #ffe60080;
+    }
+
+    .button-container a::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.4s ease, height 0.4s ease;
+      z-index: 0;
+    }
+
+    .button-container a:active::after {
+      width: 200%;
+      height: 500%;
+    }
+
+    .button-container a span {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+
+      .button-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="malware.html">Malware</a>
+    <a href="viruses.html">Viruses</a>
+    <a href="insiders.html">Insiders</a>
+    <a href="criminal_organization.html">Criminal Org.</a>
+    <a href="intruder.html">Intruder</a>
+    <a href="terrorist_activity.html" class="active">Terrorist Activity</a>
+    <a href="videos.html">Videos</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <div class="container">
+    <h1>Terrorist Activity: An In-Depth Overview</h1>
+
+    <h2>What is Terrorist Activity?</h2>
+    <p>Terrorist activity refers to violent actions carried out by individuals, groups, or organizations with the intent to create fear, exert political influence, or achieve ideological objectives.</p>
+
+    <h2>Types of Terrorist Activities</h2>
+
+    <h3>1. Suicide Attacks 💣</h3>
+    <p>Suicide bombers carry explosives to targeted locations and detonate them, often causing mass casualties.</p>
+
+    <h3>2. Bombings and Explosions 🏢💥</h3>
+    <p>Terrorists use explosive devices (such as Improvised Explosive Devices - IEDs) to attack public places, government buildings, or transport systems.</p>
+
+    <h3>3. Cyberterrorism 💻🛡</h3>
+    <p>Cyberterrorism involves digital attacks on governments, financial systems, or infrastructure to disrupt security and economy.</p>
+
+    <h3>4. Assassinations and Targeted Killings 🎯</h3>
+    <p>Some terrorist groups assassinate political figures, government officials, or security personnel to weaken the state.</p>
+
+    <h2>Effects of Terrorist Activities</h2>
+    <ul>
+      <li><span>Loss of Human Lives</span> – Innocent people are often the victims of terrorist attacks.</li>
+      <li><span>Economic Disruptions</span> – Businesses suffer, leading to financial instability.</li>
+      <li><span>Psychological Impact</span> – Fear and anxiety spread in affected communities.</li>
+      <li><span>Political Instability</span> – Governments may struggle to maintain order.</li>
+    </ul>
+
+    <h2>Preventing and Combating Terrorist Activities</h2>
+    <ul>
+      <li><span>Strengthening Intelligence</span> – Surveillance and monitoring of suspicious activities.</li>
+      <li><span>Counterterrorism Laws</span> – Implementing strict regulations against terrorism.</li>
+      <li><span>Cybersecurity Measures</span> – Protecting critical online infrastructure.</li>
+    </ul>
+
+    <div class="button-container">
+        <a href="criminal_organization.html"><span>⬅ Back to intruder</span></a>
+        <a href="videos.html"><span>Next: videos ➡</span></a>
+      </div>
+    </div>
+  
+
+</body>
+</html>

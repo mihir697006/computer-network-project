@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Viruses, Worms, and Trojans</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #1b1f3b, #2c3e50);
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 15px 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      color: #ffffffcc;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #ffe600;
+    }
+
+    nav a.active,
+    nav a[href="viruses.html"] {
+      background-color: #ffe600;
+      color: #000;
+      font-weight: bold;
+    }
+
+    nav a.active:hover,
+    nav a[href="viruses.html"]:hover {
+      background-color: #ffcf00;
+      color: #111;
+      box-shadow: 0 0 10px #ffe60080;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #2e3a59;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .highlight-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid #ffe600;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #ffe60066;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .highlight-box h1 {
+      color: #ffe600;
+      font-size: 2.5em;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ffe60080, 0 0 20px #ffe60040;
+      }
+      to {
+        text-shadow: 0 0 20px #ffe600cc, 0 0 30px #ffe60099;
+      }
+    }
+
+    p, ul {
+      font-size: 1rem;
+      color: #ddd;
+      margin-bottom: 20px;
+    }
+
+    h2, h3 {
+      color: #ffd700;
+      margin: 30px 0 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+
+    strong {
+      color: #ffe600;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nav-buttons a {
+      padding: 14px 28px;
+      background: #ffe600;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px #ffe60066;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-buttons a:hover {
+      background-color: #ffcf00;
+      box-shadow: 0 0 20px #ffe600cc, 0 0 30px #ffe60080;
+    }
+
+    .nav-buttons a::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.4s ease, height 0.4s ease;
+      z-index: 0;
+    }
+
+    .nav-buttons a:active::after {
+      width: 200%;
+      height: 500%;
+    }
+
+    .nav-buttons a span {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+
+      .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="malware.html">Malware</a>
+    <a href="viruses.html" class="active">Viruses</a>
+    <a href="insiders.html">Insiders</a>
+    <a href="criminal_organization.html">Criminal Org.</a>
+    <a href="intruder.html">Intruder</a>
+    <a href="terrorist_activity.html">Terrorist Activity</a>
+    <a href="videos.html">Videos</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <div class="container">
+    <div class="highlight-box">
+      <h1>Viruses, Worms, and Trojans</h1>
+    </div>
+
+    <h2>Virus</h2>
+    <p>A <strong>virus</strong> is a malicious program that attaches itself to legitimate programs or files. It spreads when the infected file or program is run, potentially damaging system files or slowing down performance.</p>
+
+    <h3>Types of Viruses</h3>
+    <ul>
+      <li><strong>Boot Sector Virus:</strong> Targets the boot sector and loads on system startup.</li>
+      <li><strong>Direct Action Virus:</strong> Executes and infects specific files when a condition is met.</li>
+      <li><strong>Resident Virus:</strong> Installs itself in memory and continues working without user interaction.</li>
+      <li><strong>Multipartite Virus:</strong> Attacks multiple parts of the system simultaneously.</li>
+      <li><strong>Overwrite Virus:</strong> Destroys original file content by overwriting it.</li>
+      <li><strong>Polymorphic Virus:</strong> Changes its code to evade antivirus software.</li>
+      <li><strong>File Infector Virus:</strong> Infects executable files and spreads when opened.</li>
+      <li><strong>Spacefiller Virus:</strong> Hides in unused portions of a file, making detection difficult.</li>
+      <li><strong>Macro Virus:</strong> Written in macro language, spreads through documents and spreadsheets.</li>
+    </ul>
+
+    <h2>Worm</h2>
+    <p><strong>Worms</strong> are standalone malware that spread through networks and systems without needing a host program or user interaction.</p>
+
+    <h3>Types of Worms</h3>
+    <ul>
+      <li><strong>Email Worm:</strong> Spreads through infected email attachments or links.</li>
+      <li><strong>Internet Worm:</strong> Propagates via internet connections and exploits vulnerabilities in web servers or operating systems.</li>
+      <li><strong>IM Worm:</strong> Spreads through instant messaging platforms by sending malicious links or files.</li>
+      <li><strong>File-Sharing Worm:</strong> Disguises as popular files and spreads via peer-to-peer networks.</li>
+      <li><strong>Network Worm:</strong> Exploits network security flaws to propagate across devices.</li>
+    </ul>
+
+    <h2>Trojan</h2>
+    <p><strong>Trojans</strong> appear as legitimate programs but perform malicious actions once activated. Unlike viruses or worms, Trojans do not replicate themselves.</p>
+
+    <h3>Types of Trojans</h3>
+    <ul>
+      <li><strong>Backdoor Trojan:</strong> Opens a backdoor for remote control of the system.</li>
+      <li><strong>Downloader Trojan:</strong> Downloads and installs other malicious software.</li>
+      <li><strong>Banking Trojan:</strong> Steals financial information like login credentials and credit card numbers.</li>
+      <li><strong>Rootkit Trojan:</strong> Hides malicious activities and files from the user and security software.</li>
+      <li><strong>Ransom Trojan:</strong> Encrypts user files and demands payment to restore access.</li>
+    </ul>
+
+    <div class="nav-buttons">
+        <a href="malware.html"><span>⬅ Back to Malware</span></a>
+        <a href="insiders.html"><span>Next: Insiders ➡</span></a>
+      </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #1b1f3b, #2c3e50);
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 15px 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      color: #ffffffcc;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #ffe600;
+    }
+
+    nav a.active,
+    nav a[href="about.html"] {
+      background-color: #ffe600;
+      color: #000;
+      font-weight: bold;
+    }
+
+    nav a.active:hover,
+    nav a[href="about.html"]:hover {
+      background-color: #ffcf00;
+      box-shadow: 0 0 10px #ffe60080;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #2e3a59;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ffe600;
+      margin-bottom: 30px;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ffe60080, 0 0 20px #ffe60040;
+      }
+      to {
+        text-shadow: 0 0 20px #ffe600cc, 0 0 30px #ffe60099;
+      }
+    }
+
+    .info-block {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 2px solid #ffe600;
+      border-left-width: 6px;
+      padding: 20px;
+      margin: 15px auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #ffe60040;
+      width: 80%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .info-block:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 25px #ffe60088;
+    }
+
+    .info-block h2 {
+      color: #ffd700;
+      margin-bottom: 8px;
+    }
+
+    .info-block p {
+      color: #ddd;
+      font-size: 0.95rem;
+    }
+
+    .student-img,
+    .faculty-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 10px auto;
+      display: block;
+      border: 2px solid #ffe600;
+      box-shadow: 0 0 10px #ffe60055;
+    }
+
+    .section-title {
+      margin-top: 30px;
+      color: #ffe600;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 24px;
+      background: #ffe600;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: 0.3s ease;
+      box-shadow: 0 0 10px #ffe60080;
+    }
+
+    .back-button:hover {
+      background: #ffcf00;
+      box-shadow: 0 0 15px #ffe600cc;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+      .info-block {
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="malware.html">Malware</a>
+    <a href="viruses.html">Viruses</a>
+    <a href="insiders.html">Insiders</a>
+    <a href="criminal_organization.html">Criminal Org.</a>
+    <a href="intruder.html">Intruder</a>
+    <a href="terrorist_activity.html">Terrorist Activity</a>
+    <a href="videos.html">Videos</a>
+    <a href="about.html" class="active">About</a>
+  </nav>
+
+  <div class="container">
+    <h1>About Us</h1>
+
+    <div class="info-block">
+      <h2>Institution</h2>
+      <p>#COLLAGE NAME.</p>
+      <h2>Guided By</h2>
+      <p>GUIDED BY NAME</p>
+      <img src="C:\xampp\htdocs\phpscript\project\uploads\WhatsApp Image 2025-04-08 at 19.14.27_15162570.jpg" alt="Faculty Image" class="faculty-img" />
+      <h2>Subject</h2>
+      <p>Computer Networks</p>
+    </div>
+
+    <div class="section-title">Submitted By:</div>
+
+    <div class="info-block">
+      <img src="C:\xampp\htdocs\phpscript\project\uploads\WhatsApp Image 2025-04-05 at 20.54.26_6503753c.jpg" alt="Mihir" class="student-img" />
+      <h2>Submitted by: YOUR GROUP MEMBER NAME</h2>
+      <p>Enrollment: ENROLLMENT NUMBER & ID</p>
+    </div>
+
+    <div class="info-block">
+      <img src="C:\xampp\htdocs\phpscript\project\uploads\WhatsApp Image 2025-04-05 at 20.58.24_56b007f2.jpg" alt="Nirbhay" class="student-img" />
+      <h2>Submitted by:  YOUR GROUP MEMBER NAME</h2>
+      <p>Enrollment: ENROLLMENT NUMBER & ID</p>
+    </div>
+
+    <div class="info-block">
+      <img src="C:\xampp\htdocs\phpscript\project\uploads\IMG_20250404_224327.jpg.jpg" alt="Yuvraj" class="student-img" />
+      <h2>Submitted by:  YOUR GROUP MEMBER NAME</h2>
+      <p>Enrollment:ENROLLMENT NUMBER & ID</p>
+    </div>
+
+    <div class="info-block">
+      <img src="C:\xampp\htdocs\phpscript\project\uploads\1740548988600.jpg.jpg" alt="Ankit" class="student-img" />
+      <h2>Submitted by:  YOUR GROUP MEMBER NAME</h2>
+      <p>Enrollment: ENROLLMENT NUMBER & ID</p>
+    </div>
+
+    <a href="index.html" class="back-button">⬅ Back to Home</a>
+  </div>
+
+</body>
+</html>
